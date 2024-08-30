@@ -24,6 +24,7 @@ def get_public_repos():
         page += 1
     return repos
 
+
 # Function to display the structure of the src directory
 def display_src_structure(src_path):
     for root, dirs, files in os.walk(src_path):
@@ -31,8 +32,9 @@ def display_src_structure(src_path):
         indent = ' ' * 4 * (level)
         print(f"{indent}{os.path.basename(root)}/")
         subindent = ' ' * 4 * (level + 1)
-        for f in files:
-            print(f"{subindent}{f}")
+        # for f in files:
+        #     print(f"{subindent}{f}")
+
 
 # Function to add a submodule
 def add_submodule(repo_url, submodule_path, src_path):
